@@ -1,0 +1,40 @@
+{
+  "name": "challenge",
+  "homepage": "https://github.com/soyzamudio/challenge",
+  "engines": {
+    "node": "0.12.x"
+  },
+  "author": "Jose Zamudio <jose@josezamudio.me>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/soyzamudio/challenge.git"
+  },
+  "version": "1.0.0",
+  "scripts": {
+    "start": "PORT=8000 nodemon server/index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^5.2.6",
+    "good": "^6.1.2",
+    "good-console": "^5.0.0",
+    "hapi": "^8.4.0",
+    "jsonexport": "^1.0.6",
+    "lodash": "^3.8.0"
+  },
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "chai": "^2.3.0",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^5.1.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-copy": "0.0.2",
+    "gulp-jade": "^1.0.0",
+    "gulp-jshint": "^1.10.0",
+    "gulp-less": "^3.0.3",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-watch": "^4.2.4",
+    "jshint-stylish": "^1.0.1",
+    "lab": "^5.8.0"
+  }
+}
