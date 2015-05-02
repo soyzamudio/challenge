@@ -6,7 +6,7 @@ angular.module('convert')
   function convert(objects) {
     // http request to the endpoint where it will be converted
     // objects = array of objects
-    return $http.post('/convert', objects);
+    return $http.post('/convert', {objects: objects});
   }
 
   return {convert:convert};

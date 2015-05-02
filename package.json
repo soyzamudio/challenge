@@ -11,7 +11,8 @@
   },
   "version": "1.0.0",
   "scripts": {
-    "start": "PORT=8000 nodemon server/index.js"
+    "start": "PORT=8000 nodemon server/index.js",
+    "test": "lab -v -m 2000 test/unit"
   },
   "license": "MIT",
   "dependencies": {
