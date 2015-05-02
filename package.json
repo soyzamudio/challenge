@@ -12,6 +12,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node server/index.js",
+    "preinstall": "rm -rf node_modules public",
+    "postinstall": "bower install && gulp build",
     "test": "lab -v -m 2000 test/unit"
   },
   "license": "MIT",
