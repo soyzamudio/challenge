@@ -8,6 +8,9 @@ angular.module('convert', [])
     .then(function(response) {
       // call downloadFile function with response from backend
       downloadFile(response.data.csv);
+    })
+    .catch(function() {
+      $scope.errorMessage = 'JSON Syntax is incorrent, please check at: http://jsonlint.com/'
     });
   };
 

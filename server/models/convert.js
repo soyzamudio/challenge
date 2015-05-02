@@ -7,7 +7,7 @@ function convertToCSV(objects, cb) {
   var data = JSON.parse(objects);
   jsonexport(data, function(err, csv){
     // if error return callback with error = true
-    if (err) { return cb(true); }
+    if (err) { return cb(true, null); }
     // else return cb with csv format
     return cb(null, csv);
   });
