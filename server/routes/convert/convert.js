@@ -1,7 +1,7 @@
 'use strict';
 
 // require Convert model
-var Convert = require('../../models/convert')
+var Convert = require('../../models/convert');
 
 module.exports = {
   handler : function(request, reply) {
@@ -10,7 +10,7 @@ module.exports = {
       // if error === true reply with a 400
       if (err) { reply().code(400); }
       // else send csv to client side
-      reply({csv: csv})
+      reply({csv: csv});
     });
   }
 };

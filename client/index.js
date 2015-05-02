@@ -5,12 +5,16 @@ angular.module('convert', [])
   $scope.convertInput = function() {
     Convert.convert($scope.textInput)
     .then(function(response) {
-      var element = angular.element('<a/>');
-      element.attr({
-        href: 'data:attachment/csv;charset=utf-8,' + encodeURI(response.data.csv),
-        target: '_blank',
-        download: 'file.csv'
-      })[0].click();
+      downloadFile(response.csv);
     });
   };
+
+  function downloadFile(csv) {
+    var element = angular.element('<a/>');
+    element.attr({
+      href: 'data:attachment/csv;charset=utf-8,' + encodeURI(csv),
+      target: '_blank',
+      download: 'file.csv'
+    })[0].click();
+  }
 }]);
