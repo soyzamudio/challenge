@@ -8,12 +8,12 @@ html(lang='en', ng-app='convert')
     link(rel='stylesheet', href='/vendor/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet', href='/index.css')
-
-  body(ng-controller='ConverterCtrl')
+    script(src='/vendor/angular/angular.js')
+    
+  body(ng-controller='ConverterCtrl' ng-cloak)
     {{test}}
 
     script(src='/vendor/jquery/dist/jquery.js')
-    script(src='/vendor/angular/angular.js')
     script(src='/vendor/lodash/lodash.js')
     script(src='/vendor/bootstrap/dist/js/bootstrap.min.js')
     script(src='/index.js')
