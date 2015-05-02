@@ -11,6 +11,7 @@ var beforeEach = lab.beforeEach;
 require('../../server/index');
 
 describe('Convert', function() {
+  describe('convertToCSV', function() {
 
     it('should convert array of objects to csv', function(done) {
       var objects = [
@@ -33,11 +34,13 @@ describe('Convert', function() {
           "country" : "France"
         }
       ]
-      Convert.convertToCSV(objects,  function(err, csv) {
+      Convert.convertToCSV(objects, function(err, csv) {
         expect(err).to.not.be.ok;
         expect(csv).to.be.ok;
         done();
       });
     });
+
+  });
 
 });
