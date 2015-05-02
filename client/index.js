@@ -5,7 +5,7 @@ angular.module('convert', [])
   $scope.convertInput = function() {
     Convert.convert($scope.textInput)
     .then(function(response) {
-      downloadFile(response.csv);
+      downloadFile(response.data.csv);
     });
   };
 
