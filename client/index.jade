@@ -11,7 +11,13 @@ html(lang='en', ng-app='convert')
     script(src='/vendor/angular/angular.js')
     
   body(ng-controller='ConverterCtrl' ng-cloak)
-    {{test}}
+    .container
+      .row
+        .col-md-12
+          h4 Please insert the array of json files
+          textarea.form-control(type='text', placeholder='Enter your array of Objects', rows='8', ng-model='textInput')
+          button.btn.btn-default(ng-click='convertInput()') Convert
+          
 
     script(src='/vendor/jquery/dist/jquery.js')
     script(src='/vendor/lodash/lodash.js')
