@@ -8,7 +8,7 @@ angular.module('convert', [])
     .then(function(response) {
       // call downloadFile function with response from backend
       swal({
-        title: 'Convertion Complete',
+        title: 'Conversion Complete',
         text: 'You will not be able to recover this imaginary file!',
         type: 'success',
         showCancelButton: true,
