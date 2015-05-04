@@ -7,7 +7,7 @@ function convertToCSV(objects, cb) {
   var data = JSON.parse(objects);
 
   // No sorting of keys
-  var options = { orderHeaders: false }
+  var options = { orderHeaders: false };
 
   jsonexport(data, options, function(err, csv){
     // if error return callback with error = true

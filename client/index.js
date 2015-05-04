@@ -7,10 +7,21 @@ angular.module('convert', [])
     Convert.convert($scope.textInput)
     .then(function(response) {
       // call downloadFile function with response from backend
-      downloadFile(response.data.csv);
+      swal({
+        title: 'Convertion Complete',
+        text: 'You will not be able to recover this imaginary file!',
+        type: 'success',
+        showCancelButton: true,
+        confirmButtonColor: '#A5DC86',
+        confirmButtonText: 'Download .csv',
+        closeOnConfirm: false
+      }, function() {
+        downloadFile(response.data.csv);
+      });
+
     })
     .catch(function() {
-      $scope.errorMessage = 'JSON Syntax is incorrent, please check at: http://jsonlint.com/'
+      swal('Wrong Syntax', 'JSON Syntax is incorrent, please check at: http://jsonlint.com/', 'error');
     });
   };
 
@@ -22,5 +33,6 @@ angular.module('convert', [])
       target: '_blank',
       download: 'file.csv'
     })[0].click();
+    swal.close();
   }
 }]);

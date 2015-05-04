@@ -8,18 +8,21 @@ html(lang='en', ng-app='convert')
     link(rel='stylesheet', href='/vendor/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet', href='/index.css')
+    link(rel='stylesheet', type='text/css', href='/vendor/sweetalert/lib/sweet-alert.css')
     script(src='/vendor/angular/angular.js')
     
   body(ng-controller='ConverterCtrl' ng-cloak)
     .container
       .row
-        .col-md-12
-          h4 Please insert the array of json files
-          p.error(ng-bind='errorMessage' ng-if='errorMessage')
-          textarea.form-control(type='text', placeholder='Enter your array of Objects', rows='8', ng-model='textInput')
-          button.btn.btn-default(ng-click='convertInput()') Convert
+        .col-md-offset-3.col-md-6
+          h4.text-center Please insert the array of json objects
+          .form-group
+            textarea.form-control(type='text', placeholder='Enter your array of Objects', rows='8', ng-model='textInput')
+          .form-group
+            button.form-control.btn.btn-primary(ng-click='convertInput()') Convert
 
     script(src='/vendor/jquery/dist/jquery.js')
+    script(src='/vendor/sweetalert/lib/sweet-alert.min.js')
     script(src='/vendor/lodash/lodash.js')
     script(src='/vendor/bootstrap/dist/js/bootstrap.min.js')
     script(src='/index.js')
