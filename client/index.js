@@ -9,7 +9,7 @@ angular.module('convert', [])
       // call downloadFile function with response from backend
       swal({
         title: 'Conversion Complete',
-        text: 'You will not be able to recover this imaginary file!',
+        text: 'Your .csv file is ready to download!',
         type: 'success',
         showCancelButton: true,
         confirmButtonColor: '#A5DC86',
